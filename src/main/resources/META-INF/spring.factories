@@ -1,2 +1,3 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  cn.cat.middle.soa.config.WhiteListAutoConfigure
+  cn.cat.middleware.soa.config.white.WhiteListAutoConfigure,\
+  cn.cat.middleware.soa.config.timeout.DoHystrixAutoConfiguration

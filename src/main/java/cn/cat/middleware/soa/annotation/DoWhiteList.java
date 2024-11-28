@@ -1,4 +1,4 @@
-package cn.cat.middle.soa.annotation;
+package cn.cat.middleware.soa.annotation;
 
 import java.lang.annotation.*;
 

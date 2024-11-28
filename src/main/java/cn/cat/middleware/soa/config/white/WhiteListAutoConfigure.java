@@ -1,6 +1,6 @@
-package cn.cat.middle.soa.config;
+package cn.cat.middleware.soa.config.white;
 
-import cn.cat.middle.soa.DoJoinPoint;
+import cn.cat.middleware.soa.DoJoinPoint;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

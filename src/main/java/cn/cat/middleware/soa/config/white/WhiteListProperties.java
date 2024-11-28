@@ -1,4 +1,4 @@
-package cn.cat.middle.soa.config;
+package cn.cat.middleware.soa.config.white;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
