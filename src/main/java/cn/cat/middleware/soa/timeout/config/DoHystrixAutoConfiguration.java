@@ -1,6 +1,6 @@
-package cn.cat.middleware.soa.config.timeout;
+package cn.cat.middleware.soa.timeout.config;
 
-import cn.cat.middleware.soa.DoHystrixPoint;
+import cn.cat.middleware.soa.timeout.DoHystrixPoint;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

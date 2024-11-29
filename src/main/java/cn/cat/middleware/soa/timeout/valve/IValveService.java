@@ -1,6 +1,6 @@
-package cn.cat.middleware.soa.valve;
+package cn.cat.middleware.soa.timeout.valve;
 
-import cn.cat.middleware.soa.annotation.DoHystrix;
+import cn.cat.middleware.soa.timeout.annotation.DoHystrix;
 import org.aspectj.lang.ProceedingJoinPoint;
 
 import java.lang.reflect.Method;

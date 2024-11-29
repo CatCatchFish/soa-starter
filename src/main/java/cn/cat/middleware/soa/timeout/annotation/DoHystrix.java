@@ -1,4 +1,4 @@
-package cn.cat.middleware.soa.annotation;
+package cn.cat.middleware.soa.timeout.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

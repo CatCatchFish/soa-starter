@@ -1,7 +1,7 @@
-package cn.cat.middleware.soa.valve.impl;
+package cn.cat.middleware.soa.timeout.valve.impl;
 
-import cn.cat.middleware.soa.annotation.DoHystrix;
-import cn.cat.middleware.soa.valve.IValveService;
+import cn.cat.middleware.soa.timeout.annotation.DoHystrix;
+import cn.cat.middleware.soa.timeout.valve.IValveService;
 import com.alibaba.fastjson.JSON;
 import com.netflix.hystrix.*;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -33,7 +33,7 @@ public class HystrixValveImpl extends HystrixCommand<Object> implements IValveSe
     }
 
     @Override
-    public Object access(ProceedingJoinPoint jp, Method method, DoHystrix doHystrix, Object[] args) throws Throwable {
+    public Object access(ProceedingJoinPoint jp, Method method, DoHystrix doHystrix, Object[] args) {
         this.jp = jp;
         this.method = method;
         this.doHystrix = doHystrix;
@@ -59,4 +59,5 @@ public class HystrixValveImpl extends HystrixCommand<Object> implements IValveSe
     protected Object getFallback() {
         return JSON.parseObject(doHystrix.returnJson(), method.getReturnType());
     }
+
 }

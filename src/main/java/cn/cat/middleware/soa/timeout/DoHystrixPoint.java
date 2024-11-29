@@ -1,8 +1,8 @@
-package cn.cat.middleware.soa;
+package cn.cat.middleware.soa.timeout;
 
-import cn.cat.middleware.soa.annotation.DoHystrix;
-import cn.cat.middleware.soa.valve.IValveService;
-import cn.cat.middleware.soa.valve.impl.HystrixValveImpl;
+import cn.cat.middleware.soa.timeout.annotation.DoHystrix;
+import cn.cat.middleware.soa.timeout.valve.IValveService;
+import cn.cat.middleware.soa.timeout.valve.impl.HystrixValveImpl;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 
 @Aspect
 public class DoHystrixPoint {
-    @Pointcut("@annotation(cn.cat.middleware.soa.annotation.DoHystrix)")
+    @Pointcut("@annotation(cn.cat.middleware.soa.timeout.annotation.DoHystrix)")
     public void aopPoint() {
     }
 

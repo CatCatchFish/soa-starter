@@ -1,6 +1,6 @@
-package cn.cat.middleware.soa;
+package cn.cat.middleware.soa.white;
 
-import cn.cat.middleware.soa.annotation.DoWhiteList;
+import cn.cat.middleware.soa.white.annotation.DoWhiteList;
 import com.alibaba.fastjson.JSON;
 import org.apache.commons.beanutils.BeanUtils;
 import org.aspectj.lang.JoinPoint;
@@ -23,7 +23,7 @@ public class DoJoinPoint {
     @Resource
     private String whiteListConfig;
 
-    @Pointcut("@annotation(cn.cat.middleware.soa.annotation.DoWhiteList)")
+    @Pointcut("@annotation(cn.cat.middleware.soa.white.annotation.DoWhiteList)")
     public void aopPoint() {
     }
 
