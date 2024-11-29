@@ -45,6 +45,12 @@
             <artifactId>hystrix-core</artifactId>
             <version>1.5.9</version>
         </dependency>
+        <!-- rate-limiter -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>33.1.0-jre</version>
+        </dependency>
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>

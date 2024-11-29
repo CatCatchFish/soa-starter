@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConditionalOnProperty(prefix = "hystrix", value = "enabled")
+@ConditionalOnProperty(prefix = "soa.timeout.hystrix", value = "enabled")
 public class DoHystrixAutoConfiguration {
 
     @Bean

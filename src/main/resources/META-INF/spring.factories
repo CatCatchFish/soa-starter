@@ -1,3 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
   cn.cat.middleware.soa.white.config.WhiteListAutoConfigure,\
-  cn.cat.middleware.soa.timeout.config.DoHystrixAutoConfiguration
+  cn.cat.middleware.soa.timeout.config.DoHystrixAutoConfiguration,\
+  cn.cat.middleware.soa.ratelimiter.config.RateLimiterAutoConfiguration
