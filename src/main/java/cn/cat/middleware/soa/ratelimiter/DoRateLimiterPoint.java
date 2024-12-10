@@ -2,6 +2,8 @@ package cn.cat.middleware.soa.ratelimiter;
 
 import cn.cat.middleware.soa.ratelimiter.annotation.DoRateLimiter;
 import cn.cat.middleware.soa.ratelimiter.valve.IValveService;
+import cn.cat.middleware.soa.ratelimiter.valve.ValveServiceFactory;
+import cn.cat.middleware.soa.ratelimiter.valve.impl.RRateLimiterValveImpl;
 import cn.cat.middleware.soa.ratelimiter.valve.impl.RateLimiterValveImpl;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -22,7 +24,7 @@ public class DoRateLimiterPoint {
 
     @Around("aopPoint() && @annotation(doRateLimiter)")
     public Object doRouter(ProceedingJoinPoint jp, DoRateLimiter doRateLimiter) throws Throwable {
-        IValveService valveService = new RateLimiterValveImpl();
+        IValveService valveService = ValveServiceFactory.getValveService(doRateLimiter.type());
         return valveService.access(jp, getMethod(jp), doRateLimiter, jp.getArgs());
     }
 
